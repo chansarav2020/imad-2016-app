@@ -7,10 +7,10 @@ app.use(morgan('combined'));
 
 var articles={
   'article-one':{
-  title:'Article One From Chandru',
-  heading:'Article One',
-  date: 'Sept 22, 2016',
-  content: `<p>
+  'title':'Article One From Chandru',
+  'heading':'Article One',
+  'date': 'Sept 22, 2016',
+  'content': `<p>
                 This is first article. This is first article. This is first article. This is first article. This is first article. This is first article. This is first article. This is first article. This is first article. This is first article.
             </p>
             <p>
@@ -24,10 +24,10 @@ var articles={
             </p>`
 },
 'article-two':{
-  title:'Article Two From Chandru',
-  heading:'Article Two',
-  date: 'Sept 23, 2016',
-  content:`<p>
+  'title':'Article Two From Chandru',
+  'heading':'Article Two',
+  'date': 'Sept 23, 2016',
+  'content':`<p>
                 This is Second article. This is Second article. This is Second article. This is Second article.
             </p>
             <p>
@@ -36,10 +36,10 @@ var articles={
 
 },
 'article-three':{
-  title:'Article Three From Chandru',
-  heading:'Article Three',
-  date: 'Sept 23, 2016',
-  content:`<p>
+  'title':'Article Three From Chandru',
+  'heading':'Article Three',
+  'date': 'Sept 23, 2016',
+  'content':`<p>
                 This is Third article. This is Third article. This is Third article. This is Third article.
             </p>
             <p>
@@ -98,7 +98,9 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
